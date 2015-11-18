@@ -1,6 +1,6 @@
 # RTI Connext DDS - Community Examples
-[<img alt="Travis Build Status" src="https://travis-ci.org/pleonex/rticonnextdds-examples.svg?branch=travis" align="right" />](https://travis-ci.org/pleonex/rticonnextdds-examples)
 
+[![Build Status](https://travis-ci.org/pleonex/rticonnextdds-examples.svg?branch=travis)](https://travis-ci.org/pleonex/rticonnextdds-examples)
 
 This repository includes examples on how to use specific features of RTI Connext DDS.
 
