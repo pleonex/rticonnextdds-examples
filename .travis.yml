@@ -1,0 +1,16 @@
+### Travis CI Integration
+
+# We will test C/C++ and Java but we want to be sure we can compile Java.
+language: java
+
+install:
+    # Install libxml2 for XML validation.
+    - wget ftp://xmlsoft.org/libxml2/LATEST_LIBXML2
+    - tar xf LATEST_LIBXML2 && cd libxml2*
+    - ./configure && make
+    - export XMLLINT_PATH=$(pwd)/
+    - cd ..
+
+script:
+    # Check XML
+    - perl resources/scripts/xml_validation.pl examples 5.2.0
