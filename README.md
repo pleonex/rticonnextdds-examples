@@ -1,10 +1,11 @@
-rticonnextdds-examples
-=======================
+# RTI Connext DDS - Community Examples
+[<img alt="Travis Build Status" src="https://travis-ci.org/pleonex/rticonnextdds-examples.svg?branch=travis" align="right" />](https://travis-ci.org/pleonex/rticonnextdds-examples)
+
 
 This repository includes examples on how to use specific features of RTI Connext DDS.
 
 To contribute enhancements or additional examples to the repository, follow the instructions on our [RTI Connext DDS Examples Wiki](https://github.com/rticommunity/rticonnextdds-examples/wiki). 
-Your contributions will be reviewed and as soon as they are approved they will automatically be included in the 
+Your contributions will be reviewed and as soon as they are approved they will automatically be included in the
 [RTI Community Portal Examples Section](http://community.rti.com).
 
 The examples contained in the [master](https://github.com/rticommunity/rticonnextdds-examples/tree/master) and [develop](https://github.com/rticommunity/rticonnextdds-examples/tree/develop)
