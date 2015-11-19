@@ -1,6 +1,6 @@
 ### Travis CI Integration
 
-# We will test C/C++ and Java but we want to be sure we can compile Java.
+# We will test C, C++, C++03/11 and Java. So we need Java installed.
 language: java
 
 install:
@@ -11,6 +11,18 @@ install:
     - export XMLLINT_PATH=$(pwd)/
     - cd ..
 
+    # Install RTI Connext DDS core host and target
+    - wget -q $DOWNLOAD_HOST
+    - wget -q $DOWNLOAD_TARGET
+    - chmod +x rti*.run
+    - ./rti*.run --mode unattended --unattendedmodeui none
+    - export NDDSHOME=$HOME/rti_connext_dds-5.2.0
+    - export LD_LIBRARY_PATH=$NDDSHOME/lib/x64Linux3.xgcc4.6.3:$LD_LIBRARY_PATH
+    - $NDDSHOME/bin/rtipkginstall -u *.rtipkg
+
 script:
     # Check XML
     - perl resources/scripts/xml_validation.pl examples 5.2.0
+
+    # Compile examples
+    - perl resources/scripts/compile_unix.pl ./examples 5.2.0 x64Linux3.xgcc4.6.3
