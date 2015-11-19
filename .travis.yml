@@ -12,8 +12,8 @@ install:
     - cd ..
 
     # Install RTI Connext DDS core host and target
-    - wget -q $DOWNLOAD_HOST
-    - wget -q $DOWNLOAD_TARGET
+    - wget -q $DOWNLOAD520_HOST
+    - wget -q $DOWNLOAD520_TARGET
     - chmod +x rti*.run
     - ./rti*.run --mode unattended --unattendedmodeui none
     - export NDDSHOME=$HOME/rti_connext_dds-5.2.0
