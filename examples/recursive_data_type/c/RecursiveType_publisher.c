@@ -87,6 +87,7 @@ static int publisher_shutdown(
 }
 
 void fill_tree(Tree *instance, int childcount, int depth, int value) {
+    int i;
     instance->node.data = value;
 
     if ( depth == 0 )  {
@@ -99,7 +100,7 @@ void fill_tree(Tree *instance, int childcount, int depth, int value) {
     }
 
     TreeSeq_ensure_length(instance->children, childcount, childcount);
-    for (int i=0; i< childcount; ++i) {
+    for (i=0; i< childcount; ++i) {
         Tree *child = TreeSeq_get_reference(instance->children, i);
         fill_tree(child, childcount, depth-1, value);
     }
